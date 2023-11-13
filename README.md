@@ -12,4 +12,4 @@ An application which streamlines and automates the tracking of employee work hou
 - MomentJS
 - Axios
 
-> Note: When deploying, kindly update the ``backendURL`` variable in [axiosInstance.js](src/api/axiosInstance.js) with the working URL of the backend server. 
+> Note: This application requires a environment variable `REACT_APP_BACKEND_URL` with the working URL of the backend server as it's value. If running locally, create a `.env.local` file with the required key and value pair in the root directory of the project. 

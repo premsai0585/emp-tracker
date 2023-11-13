@@ -10,7 +10,6 @@ export default function PostAttendance(){
     const postInAttendance = (empID)=>{
         axiosInstance.post('/post/in/atnd', {empID}).then((res)=>{
             if (res.data.success){
-                console.log(res.data)
                 let atndObj = {...attendaces};
                 atndObj[empID].inTime = res.data.inTime;
                 setAttendances(atndObj);
@@ -24,7 +23,6 @@ export default function PostAttendance(){
     const postOutAttendance = (empID)=>{
         axiosInstance.post('/post/out/atnd', {empID}).then((res)=>{
             if (res.data.success){
-                console.log(res.data)
                 let atndObj = {...attendaces};
                 atndObj[empID].endTime = res.data.endTime;
                 setAttendances(atndObj);
@@ -52,7 +50,6 @@ export default function PostAttendance(){
                     atndObj[atnd.empID].endTime = atnd.endTime;
                 })
                 setAttendances(atndObj);
-                console.log(atndObj)
             }).catch((error)=>{
                 alert("Could not fetch employees list. Please try again.")
             })

@@ -11,7 +11,7 @@ export default function Dashboard() {
     const [late, setLate] = useState(0);
     const [absent, setAbsent] = useState(0);
     const getAttnd = () => {
-        axios.get('http://127.0.0.1:5000/get/all/atnd', { withCredentials: true }).then((res) => {
+        axiosInstance.get('/get/all/atnd').then((res) => {
             console.log(res.data)
         })
     }

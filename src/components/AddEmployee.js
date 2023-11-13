@@ -56,8 +56,8 @@ export default function AddEmployee() {
                     </div>
                     <div className="mb-3 form-group">
                         <label className="form-label" htmlFor="gender" >Gender</label>
-                        <select name="gender" id="gender" class="mb-3 form-select" value={gender} onChange={(e) => { setGender(e.target.value) }}>
-                            <option value="" selected></option>
+                        <select name="gender" id="gender" className="mb-3 form-select" value={gender} onChange={(e) => { setGender(e.target.value) }}>
+                            <option value=""></option>
                             <option value="Male">Male</option>
                             <option value="Female">Female</option>
                             <option value="Other">Other</option>
