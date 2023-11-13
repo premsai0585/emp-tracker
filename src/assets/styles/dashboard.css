@@ -1,0 +1,23 @@
+:root {
+    --clr-primary-700: #262528;
+    --clr-primary-900: #141218;
+    --clr-secondary: #ffffff;
+}
+
+body {
+    background-color: var(--clr-primary-900);
+    color: var(--clr-secondary);
+}
+
+.dash-card {
+    background-color: var(--clr-primary-700);
+    color: var(--clr-secondary);
+}
+
+.green {
+    color: green;
+}
+
+.red {
+    color: red;
+}

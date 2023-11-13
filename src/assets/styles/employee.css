@@ -1,0 +1,31 @@
+.atnd-card {
+    background-color: var(--clr-primary-700);
+    color: var(--clr-secondary);
+    min-width: 200px;
+}
+
+.atnd-list{
+    background-color: var(--clr-primary-700);
+    border-radius: 1rem;
+}
+
+.atnd-list>:last-child {
+    border-bottom: 0;
+}
+
+.atnd-list-row{
+    border-bottom: 2px solid rgba(255, 255, 255, 0.499);
+}
+
+
+@media (max-width: 600px) {
+    .atnd-card {
+        min-width: 180px;
+    }
+}
+
+@media (max-width: 400px) {
+    .atnd-card {
+        min-width: 160px;
+    }
+}

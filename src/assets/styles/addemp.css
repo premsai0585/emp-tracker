@@ -1,0 +1,5 @@
+.addemp-form {
+    max-width: 600px;
+    border-radius: 1.5rem;
+    background-color: var(--clr-primary-700);
+}

@@ -1,0 +1,13 @@
+.post-atnd-wrapper {
+    background-color: var(--clr-primary-700);
+    border-radius: 2rem;
+}
+
+.post-atnd-row {
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+    line-height: 50px;
+}
+
+.post-atnd-wrapper>:first-child {
+    border-top: none;
+}
