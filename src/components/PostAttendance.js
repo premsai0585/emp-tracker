@@ -36,7 +36,7 @@ export default function PostAttendance(){
         });
     }
     useEffect(()=>{
-        if (parseInt(moment().format('d')) != 0 && parseInt(moment().format('d')) != 6){
+        if (parseInt(moment().format('d')) !== 0 && parseInt(moment().format('d')) !== 6){
             setWeekday(true);
             var todaysAttendance = [];
             var employees = [];

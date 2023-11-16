@@ -1,0 +1,11 @@
+/* .side-img {
+    background-image: url("../images/1.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-clip: border-box;
+} */
+
+.register-input {
+    min-width: 300px;
+}

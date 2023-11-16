@@ -7,7 +7,7 @@ import '../assets/styles/employee.css';
 import AttendanceRow from "./AttendanceRow";
 
 export default function Employee() {
-    const [empID, setEmpID] = useState(useParams().empID)
+    const [empID, setEmpID] = useState(useParams().empID);
     const [sDate, setSDate] = useState('');
     const [eDate, setEDate] = useState('');
     const [totalDays, setTotalDays] = useState(0);
@@ -16,25 +16,7 @@ export default function Employee() {
     const [daysLate, setDaysLate] = useState(0);
     const [attendace, setAttendance] = useState([]);
     const [show, setShow] = useState(false);
-    const updateAttendance = () => {
-        let weekdays = 0;
-        var atndObj = {};
-        for (var i = 0; i <= moment(eDate).diff(sDate, 'days'); i++) {
-            if (parseInt(moment(sDate).add(i, 'days').format('d')) !== 0 && parseInt(moment(sDate).add(i, 'days').format('d')) !== 6) {
-                weekdays++;
-                atndObj[moment(sDate).add(i, 'days').format('YYYY-MM-DD')] = { present: false };
-            }
-        }
-        console.log(attendace)
-        attendace.forEach((day) => {
-            atndObj[day.date]['present'] = true;
-            console.log(day.date)
-        })
-        console.log(atndObj)
-        setDaysPresent(attendace.length);
-        setTotalDays(weekdays);
-        setShow(true);
-    }
+
     const fetchAtnd = (e) => {
         if (sDate !== '' && eDate !== '') {
             axiosInstance.post('/get/emp/atnd', { empID, sDate, eDate }).then((res) => {
@@ -72,8 +54,10 @@ export default function Employee() {
             alert('Start and end dates cannot be empty!');
         }
     }
+
     useEffect(() => {
     }, [])
+    
     return (
         <div className="d-flex flex-column min-vh-100">
             <Navbar />

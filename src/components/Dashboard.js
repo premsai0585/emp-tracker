@@ -1,4 +1,3 @@
-import axios from "axios";
 import '../assets/styles/dashboard.css';
 import Navbar from "./Navbar";
 import { useState, useEffect } from "react";
@@ -11,13 +10,9 @@ export default function Dashboard() {
     const [late, setLate] = useState(0);
     const [absent, setAbsent] = useState(0);
     const [weekday, setWeekday] = useState(false);
-    const getAttnd = () => {
-        axiosInstance.get('/get/all/atnd').then((res) => {
-            console.log(res.data)
-        })
-    }
+    
     useEffect(() => {
-        if (parseInt(moment().format('d')) != 0 && parseInt(moment().format('d')) != 6) {
+        if (parseInt(moment().format('d')) !== 0 && parseInt(moment().format('d')) !== 6) {
             setWeekday(true);
             axiosInstance.get('get/emps/count').then((res) => {
                 var totalCount = res.data.count;
