@@ -21,7 +21,7 @@ export default function AddEmployee() {
                 });
                 return false;
             }
-            if (validator.isMobilePhone(mobile)) {
+            if (!validator.isMobilePhone(mobile, 'any')) {
                 toast.error("Enter a valid mobile number.", {
                     position: toast.POSITION.TOP_CENTER
                 });
